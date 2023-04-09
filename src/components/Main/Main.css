@@ -1,0 +1,14 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main__container {
+  display: grid;
+  grid-template-columns: 360px 664px;
+  grid-template-rows: auto auto;
+  grid-template-areas: 'search hotel'
+                       'like hotel';
+  gap: 24px;
+}

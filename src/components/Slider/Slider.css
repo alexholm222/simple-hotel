@@ -1,0 +1,9 @@
+.swiper-slide {
+  width: 164px;
+}
+
+.slide__img {
+  width: 164px;
+  height: 149px;
+  object-fit: cover;
+}

@@ -1,0 +1,90 @@
+.ant-picker {
+  width: 100%;
+  height: 50px;
+  padding: 0 15px;
+  border: 1px solid #C9CACC;
+  box-sizing: border-box;
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+ 
+}
+
+.ant-picker .ant-picker-input >input {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 20px;
+  color: #424242;
+}
+
+.ant-picker:hover {
+  border: 1px solid #C9CACC;
+  box-shadow: none;
+}
+.ant-picker-focused {
+  box-shadow: none;
+}
+
+.ant-space {
+  width: calc(100% - 64px);
+  margin: 0 32px;
+  height: 50px;
+  margin: 0 32px 16px;
+}
+
+
+.anticon-calendar {
+  display: none;
+}
+
+.ant-picker-suffix {
+  width: 18px;
+  height: 18px;
+  background-image: url(../../images/calendar-today.svg);
+  opacity: 1;
+  transition: opacity 0.2s;
+}
+
+.ant-picker-suffix:active {
+  opacity: 0.8;
+}
+
+.ant-picker-dropdown {
+  width: 296px;
+}
+.ant-picker-panel {
+  width: 100%;
+}
+.ant-picker-date-panel {
+  width: 100%;
+}
+.ant-picker-header {
+  width: 100%;
+}
+
+.ant-picker-panel-container {
+  box-shadow: 0px 4px 33px rgba(0, 0, 0, 0.04);
+  border-radius: 16px;
+}
+
+.ant-picker-dropdown .ant-picker-cell-in-view.ant-picker-cell-selected .ant-picker-cell-inner {
+  background: linear-gradient(104.34deg, #41522E -15.34%, #BE8022 145.95%);
+}
+
+.ant-picker-dropdown .ant-picker-cell-in-view.ant-picker-cell-today .ant-picker-cell-inner::before {
+  border: 1px solid #986e2e5b;
+}
+
+.ant-picker-dropdown .ant-picker-today-btn {
+  color: #424242;
+}
+
+.ant-picker-dropdown .ant-picker-today-btn:hover {
+  color: #7b7b7b;
+}
+
+.ant-picker-dropdown .ant-picker-today-btn:active {
+  color: #1b1b1b;;
+}

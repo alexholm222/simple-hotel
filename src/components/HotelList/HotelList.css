@@ -1,0 +1,39 @@
+.hotels__list {
+    padding: 5px 0 0;
+    margin: 12px 32px 48px;
+    height: 548px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+  }
+  
+  .hotels__list::-webkit-scrollbar {
+    width: 2px;
+    border-radius: 2px;
+  }
+  
+  .hotels__list::-webkit-scrollbar:disabled {
+    width: 0;
+  }
+  
+  .hotels__list::-webkit-scrollbar-track {
+    background-color: #E7E7E7;
+  }
+  
+  .hotels__list::-webkit-scrollbar-thumb {
+    background-color: #41522E;
+    border-radius: 2px;
+  }
+
+  .hotels__text_err {
+    color: #99A0A3;
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 22px;
+    text-align: center;
+    align-self: center;
+  }
+
+  

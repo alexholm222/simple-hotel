@@ -1,0 +1,160 @@
+.favorites {
+  grid-area: like;
+  flex-direction: column;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 33px rgba(0, 0, 0, 0.04);
+  border-radius: 16px;
+  height: 472px;
+}
+
+.favorites__title {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  margin: 32px 0 32px 32px;
+}
+
+.container__sorting {
+  margin: 0 0 16px 32px;
+  display: flex;
+}
+
+.favorites__sorting {
+  background: #FFFFFF;
+  border: 1px solid #E5E5E5;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-right: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.favorites__sorting_active {
+  border-color: #41522E;
+}
+
+.favorites__sorting_active .favorites__text {
+  color: #41522E;
+}
+
+.favorites__text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -0.408px;
+  color: #99A0A3;
+  margin: 4px 8px;
+  transition: all 0.2s;
+}
+
+.favorites__arrows {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 8px 0 0;
+}
+
+.favorites__arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 8.5px;
+  height: 5.3px;
+  padding: 0;
+  border: none;
+  background-color: #FFFFFF;
+  object-fit: cover;
+}
+
+.favorites__arrow svg path {
+  transition: all 0.2s;
+}
+
+.favorites__arrow_up {
+  margin-right: 0.4px;
+  transform: rotate(180deg);
+}
+
+.favorites__arrow_down {
+  margin-top: 1.4px;
+}
+.favorites__arrow_active svg path {
+  fill-opacity: 1;
+}
+
+.favorites__list {
+  height: 310px;
+  margin-right: 32px;
+  list-style-type: none;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.favorites__list::-webkit-scrollbar {
+  width: 2px;
+  border-radius: 2px;
+}
+
+.favorites__list::-webkit-scrollbar:disabled {
+  width: 0;
+}
+  
+.favorites__list::-webkit-scrollbar-track {
+  background-color: #E7E7E7;
+}
+  
+.favorites__list::-webkit-scrollbar-thumb {
+  background-color: #41522E;
+  border-radius: 2px;
+}
+
+.favorites__list .hotel .hotel__picture {
+  display: none;
+}
+
+.favorites__list .hotel .hotel__text_price {
+  margin-right: 0;
+  margin-bottom: 16px;
+}
+
+.favorites__list .hotel .hotel__text {
+  margin-bottom: 16px;
+}
+
+.favorites__list .hotel .hotel__like {
+  margin-top: 16px;
+  margin-right: 0;
+}
+
+.favorites__list .hotel .hotel__date span {
+  margin-left: 15px;
+}
+
+.favorites__list .hotel .hotel__stars {
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.favorites__list .hotel .hotel__title {
+  margin-top: 16px;
+  max-width: 220px;
+  text-overflow: ellipsis;
+}
+
+.favorites__list .hotel {
+  min-height: 103px;
+}
+
+.favorites__text_err {
+  font-weight: 300;
+  font-size: 17px;
+  line-height: 22px;
+  letter-spacing: -0.408px;
+  text-align: center;
+}
