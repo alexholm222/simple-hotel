@@ -67,6 +67,18 @@
   filter: brightness(0.8);
 }
 
+.search__button_disabled {
+  background: linear-gradient(104.34deg, #888988 -15.34%, #7f7d7a 145.95%);
+  cursor: auto;
+  opacity: 0.5;
+}
+.search__button_disabled:hover {
+  opacity:0.5;
+}
+.search__button_disabled:active {
+  filter: brightness(1);
+}
+
 .search__popup {
   position: absolute;
   width: calc(100% - 64px);
