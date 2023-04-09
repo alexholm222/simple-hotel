@@ -1,11 +1,12 @@
 import './Favorites.css';
 import Hotel from '../Hotel/Hotel';
 import { useSelector, useDispatch} from 'react-redux';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { sortFavorites } from '../../store/favoritesReducer';
 import { setSortRating, setSortPrice, setSortPriceActive, setSortRatingActive } from '../../store/sortStateReducer';
 
 function Favorites() {
+  const [disabledButton, setDisabledButton] = useState(false)
   const dispatch = useDispatch()
   const favorites = useSelector(state => state.favoritesReduser.favorites);
   const rating = useSelector(state => state.reducerSort.rating);
@@ -16,6 +17,18 @@ function Favorites() {
   useEffect(() => {
     localStorage.setItem('favorites', JSON.stringify(favorites));
   },[favorites]);
+
+  useEffect(() => {
+    if(favorites.length === 0) {
+      dispatch(setSortPrice(''));
+      dispatch(setSortRating(''));
+      dispatch(setSortRatingActive(false));
+      dispatch(setSortPriceActive(false));
+      setDisabledButton(true)
+    } else {
+      setDisabledButton(false)
+    }
+  },[favorites.length])
   
   useEffect(() => {
     localStorage.setItem('sortRating', JSON.stringify(rating));
@@ -70,7 +83,7 @@ function Favorites() {
     <section className='favorites'>
       <h2 className='favorites__title'>Избранное</h2>
       <div className='container__sorting'>
-        <div onClick={handleSortRating} className={`favorites__sorting ${ratingActive ? 'favorites__sorting_active' : ''}`}>
+        <button type='button' disabled={disabledButton} onClick={handleSortRating} className={`favorites__sorting ${ratingActive ? 'favorites__sorting_active' : ''}`}>
           <p  className='favorites__text'>Рейтинг</p>
           <div className='favorites__arrows'>
             <div className={`favorites__arrow favorites__arrow_up ${rating === 'up' ? 'favorites__arrow_active' : ''}`}>
@@ -84,8 +97,8 @@ function Favorites() {
               </svg>
             </div>
           </div>
-        </div>
-        <div onClick={handleSortPrice} className={`favorites__sorting ${priceActive ? 'favorites__sorting_active' : ''}`}>
+        </button>
+        <button disabled={disabledButton} onClick={handleSortPrice} className={`favorites__sorting ${priceActive ? 'favorites__sorting_active' : ''}`}>
           <p className='favorites__text'>Цена</p>
           <div className='favorites__arrows'>
             <div className={`favorites__arrow favorites__arrow_up ${price === 'up' ? 'favorites__arrow_active' : ''}`}>
@@ -99,7 +112,7 @@ function Favorites() {
               </svg>
             </div>
           </div>
-        </div>
+        </button>
       </div>
       <ul className='favorites__list'>
         {favorites.length === 0 

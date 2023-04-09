@@ -25,11 +25,16 @@
   border-radius: 4px;
   box-sizing: border-box;
   margin-right: 8px;
+  padding: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
   transition: all 0.2s;
+}
+
+.favorites__sorting:disabled {
+  cursor: auto;
 }
 
 .favorites__sorting_active {
